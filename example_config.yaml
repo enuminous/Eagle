@@ -1,0 +1,19 @@
+machine: EAGLE-M1
+version: 1.0.0
+
+failure_horizon: 20
+temporal_horizons:
+  - 3
+  - 7
+  - 15
+
+false_alarm_budget: 0.05
+
+primary_evaluation:
+  compare:
+    - sensitivity
+    - median_event_lead_time
+  constraint: matched_false_alarm_rate
+
+freeze:
+  hash: sha256

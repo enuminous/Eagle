@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EAGLE Alert Record",
+  "type": "object",
+  "required": [
+    "machine_version",
+    "timestamp",
+    "system_id",
+    "risk_score",
+    "alert"
+  ],
+  "properties": {
+    "machine_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "alert": {
+      "type": "boolean"
+    },
+    "gradient_loss": {
+      "type": "number"
+    },
+    "gradient_disagreement": {
+      "type": "number"
+    },
+    "snapshot_anomaly": {
+      "type": "number"
+    }
+  }
+}

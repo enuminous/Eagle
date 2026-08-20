@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "efmw-eagle"
+version = "1.0.0"
+description = "Early anomaly and gradient-loss framework derived from EFMW."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Matthew C. Wright"}]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "PyYAML>=6.0"
+]
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py"]
